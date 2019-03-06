@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+<meta charset=utf-8>
+<title>1st</title>
+<style>
+    body{background-color:#e8d8f9;}
+</style>
+<script>
+    function sizer(){
+        return (Math.random() * 500 + 50)+"px";
+    }
+    function mova(){
+        var mov = parseInt(document.getElementById("movb").style.marginLeft);
+        mov++;
+        document.getElementById("movb").style.marginLeft = mov + "%";
+    }
+    function freem(){
+        document.getElementById("movb").style.marginLeft = event.clientX-45 + "px";
+        document.getElementById("movb").style.marginTop = event.clientY-150 + "px";
+    }
+</script>
+</head>
+
+<body>
+<h1><marquee loop=2>Hello, meme！</marquee></h1>
+<img id="movb" alt=".." src="../phpkiso/Yoshinari Yamada.png" style="position:absolute; margin-left:10%; margin-top:0%; height:100px" onclick="this.style.height=sizer();" onmouseover onmousemove="freem();">
+<br>
+<select size="3" multiple>
+    <option>break fast
+    <option>lunch
+    <option>dinner
+        </select>
+<ul>
+    <li>meme
+        <ul>
+            <li>京王
+            <li>南北
+                </ul>
+    <li Type="square">Y
+        <ul>
+            <li>京王
+            <li><a href="2nd.php">南北</a>
+                    </ul>
+    <li Type="circle">R
+        <ul>
+            <li>京王
+            <li>南北
+                </ul>
+                    </ul>
+<dl>
+    <dt>meme<dd>girl
+    <dt>Y<dd>boy
+    <dt onclick="alert('らすくんだよ');">R<dd>raccoon
+
+<hr>
+<h2>ゲーム</h2>
+<form method="post" action="2nd.php">
+    <p>p1. 3 different numbers
+    <input name="p1x" type="password" size=5 maxlength=3>
+    <p>p2. 3 different numbers
+    <input name="p2x" type="password" size=5 maxlength=3>
+    <p>p1. answer
+    <input name="p1a" size=5 maxlength=3>
+    <p>p2. answer
+    <input name="p2a" size=5 maxlength=3>
+    <input type="submit" value="send">
+    <br>
+    <button type="reset">clear<img src="../phpkiso/Yoshinari Yamada.png" style="height:100px"></button>
+</form>
+</body></html>
